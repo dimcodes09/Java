@@ -1,13 +1,23 @@
 import java.util.*;
 public class Patterns{
 
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter the first number: ");
-        double x = sc.nextDouble();
-
-        System.out.print("Enter the second number: ");
-        double y = sc.nextDouble();
+    public static void update(int marks[], int nonChangable){
+        nonChangable = 10;
+        for(int i=0; i<marks.length; i++){
+            marks[i] = marks[i] + 1;
+        }
     }
+
+    public static void main(String[] args){
+        int marks[]= {97,98,99};
+        int nonChangable = 5;
+        update(marks , nonChangable);
+        System.out.println(nonChangable);
+
+        //print our marks
+        for(int i=0; i<marks.length; i++){
+            System.out.print(marks[i] + " ");
+        }
+        System.out.println();
+    } 
 }
